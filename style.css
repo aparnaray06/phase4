@@ -1,0 +1,164 @@
+:root {
+    color-scheme: light;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #26332d;
+    background: #f4f6f3;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+    padding: 48px 24px;
+}
+
+.app-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(260px, 0.8fr);
+    gap: 24px;
+    width: min(100%, 1040px);
+    margin: 0 auto;
+}
+
+.fruit-page {
+    display: grid;
+    min-height: calc(100vh - 96px);
+    place-items: center;
+}
+
+.card {
+    padding: 32px;
+    border: 1px solid #e1e7e1;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgb(36 54 43 / 6%);
+}
+
+.generator-card,
+.definition-card {
+    align-self: start;
+}
+
+h1,
+h2 {
+    margin: 0 0 20px;
+    color: #26332d;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: clamp(1.6rem, 3vw, 2rem);
+}
+
+h2 {
+    font-size: 1.35rem;
+}
+
+.intro {
+    margin: -8px 0 24px;
+    color: #65736a;
+    line-height: 1.6;
+}
+
+.text-input {
+    display: block;
+    width: 100%;
+    min-height: 48px;
+    margin: 0 0 14px;
+    padding: 12px 14px;
+    border: 1px solid #cbd5cc;
+    border-radius: 7px;
+    background: #fff;
+    color: inherit;
+    font: inherit;
+    resize: vertical;
+    transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.text-input::placeholder {
+    color: #89958c;
+}
+
+.text-input:focus {
+    border-color: #52745d;
+    outline: none;
+    box-shadow: 0 0 0 3px rgb(82 116 93 / 14%);
+}
+
+.button {
+    display: inline-flex;
+    min-height: 46px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 11px 16px;
+    border: 1px solid #456b50;
+    border-radius: 7px;
+    background: #456b50;
+    color: #fff;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 150ms ease, border-color 150ms ease;
+}
+
+.button:hover {
+    border-color: #36583f;
+    background: #36583f;
+}
+
+.button:focus-visible {
+    outline: 3px solid rgb(82 116 93 / 32%);
+    outline-offset: 2px;
+}
+
+.button-secondary {
+    margin: 20px 0 14px;
+    border-color: #d3ddd4;
+    background: #eef3ee;
+    color: #36583f;
+}
+
+.button-secondary:hover {
+    border-color: #c4d2c6;
+    background: #e3ebe4;
+}
+
+.result {
+    min-height: 88px;
+    padding: 16px;
+    border: 1px solid #e5eae5;
+    border-radius: 7px;
+    background: #f8faf8;
+    color: #45534a;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+}
+
+@media (max-width: 700px) {
+    body {
+        padding: 24px 16px;
+    }
+
+    .app-layout {
+        grid-template-columns: 1fr;
+        max-width: 560px;
+    }
+
+    .card {
+        padding: 24px;
+    }
+
+    .fruit-page {
+        min-height: calc(100vh - 48px);
+    }
+}
